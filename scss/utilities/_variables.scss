@@ -1,0 +1,95 @@
+// ==============================================
+// Variables
+// ==============================================
+
+// Fonts
+
+$font-url   : "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
+$stack-lato : "Lato", sans-serif;
+
+$font-wt-thin    : 100;
+$font-wt-light   : 300;
+$font-wt-regular : 400;
+$font-wt-bold    : 700;
+$font-wt-bolder  : 900;
+
+$base-font-size : 16px;
+
+// Breakpoints
+
+$brkpoint-sm : 1px;
+$brkpoint-md : 768px;
+$brkpoint-lg : 1100px;
+
+
+// Colors
+
+$white      :#FFF;
+$grey       :#808080;
+$black      :#181616;
+
+$emerald    :#50C878;
+$java       :#28DCB8;
+$spray      :#3DDBDB;
+$flamingo   :#F4621A;
+$roman      :#DA5652;
+$studio     :#8451A9;
+$magic-ment :#8FF0CB;
+$matisse    :#146FA3;
+$malibu     :#56DEF5;
+$perfume    :#D3A2F6;
+$apple      :#51BA4F;
+$sunglo     :#DF6F6D;
+$apricot    :#E59061;
+
+$grid-colors: (
+	$emerald,
+	$java,
+	$perfume,
+	$malibu,
+	$apple,
+	$matisse,
+	$sunglo,
+	$apricot,
+	$flamingo,
+	$roman,
+	$studio,
+	$magic-ment
+);
+
+$primary-color   : $java;
+$secondary-color : $malibu;
+
+$color-palettes: (
+	grey: (
+		xx-light : lighten($grey, 45%),
+		x-light  : lighten($grey, 35%),
+		base     : $grey,
+		x-dark   : darken($grey, 35%),
+		xx-dark  : darken($grey, 45%),
+	)
+);
+
+$ui-colors: (
+	success : $emerald,
+	error   : $roman,
+	warning : $flamingo,
+	info    : $studio,
+	default : $spray,
+);
+
+// Grid
+
+$g-col-width    : 65px;
+$g-gutter-width : 20px;
+$g-col-count    : 12;
+$g-cont-max-w   : 1050px;
+
+// Border Radius
+$brd-rad : 5px;
+
+// IMG Path
+
+$path-img : "../images";
+
+

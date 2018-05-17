@@ -1,0 +1,24 @@
+// ==============================================
+// Button Styles
+// ==============================================
+@import 'utilities/variables';
+@import 'utilities/extends';
+@import 'utilities/mixins';
+@import 'utilities/functions';
+
+
+.btn {
+    @include m(default) {
+        margin-top: px(30px);
+    }
+    
+    @each $theme, $color in $ui-colors {
+        &--#{$theme}.theme__colors {
+            background: $color;
+        }
+    }
+}
+
+[class^="btn--"] {
+     @extend %btn;  
+}

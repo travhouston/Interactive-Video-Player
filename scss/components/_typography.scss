@@ -1,0 +1,68 @@
+// ==============================================
+// Typography Styles
+// ==============================================
+@import 'utilities/variables';
+@import 'utilities/extends';
+@import 'utilities/mixins';
+@import 'utilities/functions';
+
+@if variable-exists(font-url) { @import url($font-url); }
+
+.container {
+    @extend %margin-auto;
+    width: 85%;
+	font-family: $stack-lato;
+}
+
+.headline {
+    @include m(primary) {
+        color: $primary-color;
+        font-weight: $font-wt-bolder;
+        width: 75%;
+        margin-top: 0;
+        margin-bottom: px(15px);
+        padding-left: px(15px); 
+    }
+    @include m(secondary){
+        color: $grey;
+        font-size: px(20px);
+        font-weight: $font-wt-light;
+        padding-bottom: 1em;
+        margin-bottom: 0;
+        @include mq(medium) {
+            margin-top: px(50px);
+        }
+    }
+}
+
+.card {
+    margin-right: px(30px);
+    padding-bottom: px(50px);
+    p {
+        @extend %margin-auto;
+        @extend %card-padding;
+        color: palette(grey);
+        font-size: px(18px);
+        line-height: 1.75em;
+        font-weight: $font-wt-light;
+    }
+}
+
+.link {
+    color: $secondary-color;
+    font-weight: $font-wt-bolder;
+    text-decoration: none;
+    font-weight: $font-wt-regular;
+}
+
+.blockquote {
+    color: palette(grey);
+    border-left: px(6px) solid $primary-color;
+    border-top-left-radius: px(5px);
+    border-bottom-left-radius: px(5px);
+    padding-left: px(15px);
+    margin: 0 px(15px) px(20px);
+    font-style: italic;
+    font-size: px(24px);
+    line-height: px(24px);
+}

@@ -1,0 +1,29 @@
+// ==============================================
+// Image Styles
+// ==============================================
+@import 'utilities/variables';
+@import 'utilities/extends';
+@import 'utilities/mixins';
+@import 'utilities/functions';
+
+.img { 
+
+    @include m(logo) {
+        @extend %margin-auto;
+        display: block;
+        padding: px(40px) 0;
+    }
+
+    @include m(frame) {
+        width: 100%;
+        padding: px(15px);
+        display: block;
+        border: solid 1px palette(grey, x-light);
+    }
+
+    @include m(avatar) {
+        @extend %margin-auto;
+        display: block;
+        padding: px(30px) 0;
+    }
+}

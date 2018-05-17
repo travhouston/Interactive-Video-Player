@@ -1,0 +1,25 @@
+// ==============================================
+// Functions
+// ==============================================
+@import 'utilities/variables';
+
+// pixels to ems
+@function px($target, $context: $base-font-size) {
+    @return ($target / $context) * 1em;
+}
+
+// percentages
+@function percentage($target, $context) {
+    @return ($target / $context) * 100%;
+}
+
+// values from palettes 
+@function palette($palette, $shade: "base"){
+    @return map-get(map-get($color-palettes, $palette), $shade);
+}
+
+// grid context width
+@function g-context($g-col-width, $g-col-count, $g-gutter-width) {
+    $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+    @return $g-context; 
+}

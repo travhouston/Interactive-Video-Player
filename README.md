@@ -1,1 +1,3 @@
-# techdegree-project-6
+Techdegree Project 6
+
+Interactive Video Player

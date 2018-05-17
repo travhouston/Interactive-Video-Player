@@ -1,0 +1,38 @@
+// ==============================================
+// Navigation Styles
+// ==============================================
+@import 'utilities/variables';
+@import 'utilities/extends';
+@import 'utilities/mixins';
+@import 'utilities/functions';
+
+
+.nav {
+    @extend %centered;
+    padding: 0 0 px(70px, 16px);
+    margin: 0;
+    @include mq(medium) {
+        @include flex(flex, row, $just: space-around);
+        width: 60%;
+        margin: px(65px) 0 0 px(200px)
+    }
+
+    @include e(item) {  
+        border-radius: $brd-rad;
+        a {
+            @extend %text-dec-none;
+            color: palette(grey);
+            display: block;
+            padding: px(12px) px(10px);
+        }
+       
+        &:hover {
+            background-color: $primary-color;
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+
+

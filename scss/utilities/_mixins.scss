@@ -1,0 +1,66 @@
+// ==============================================
+// Mixins
+// ==============================================
+@import 'utilities/variables';
+
+
+// Flexbox Settings
+
+@mixin flex($display: flex, $dir: null, $wrap: null, $just: null) {
+	display: $display;
+	flex-direction: $dir;
+	flex-wrap: $wrap;
+	justify-content: $just;
+	@content;
+}
+
+// Grid Color
+
+@mixin grid-background-color {
+    @each $color in $grid-colors {
+        $index: index($grid-colors, $color);
+
+        &--#{$index}.theme__colors {
+            background-color: $color;
+        }
+    }
+}
+
+
+
+// Media Queries
+
+@mixin mq($break) {
+    @if $break == "small" {
+        @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+            @content;
+        }
+    }
+    @else if $break == "medium" {
+        @media (min-width: $brkpoint-md) {
+            @content;
+        }
+    }
+    @else if $break == "large" {
+        @media (min-width: $brkpoint-lg) {
+            @content;
+        }
+    }
+    @else {
+        @error "No value was found for #{$break}";
+    }
+}
+
+// BEM
+
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
